@@ -1,0 +1,53 @@
+.navbar {
+    grid-area: navbar;
+    background: $white;
+}
+
+.navbar.active {
+    top: 0;
+    transition: 350ms;
+}
+
+.navbar__nav {
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar__items {
+        padding: 0;
+    }
+}
+
+.navbar__item {
+    list-style-type: none;
+    color: $white;
+    line-height: 2.7rem;
+
+    a {
+        color: $black;
+        text-transform: uppercase;
+
+        font-weight: $font-weight-300;
+        font-size: $font-size-twenty;
+
+        transition: font-weight .2s ease-in-out;
+
+        &:hover {
+            font-weight: $font-weight-500;
+        }
+    }
+
+    .active {
+        font-weight: $font-weight-500;
+    }
+}
+
+.navbar__select {
+    border: none;
+    padding: 0 5px 0 0;
+
+    font-weight: $font-weight-300;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+}

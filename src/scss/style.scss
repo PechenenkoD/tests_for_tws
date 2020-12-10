@@ -1,0 +1,20 @@
+@import "vars";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+/* Blocks */
+@import "blocks/container.scss";
+@import "blocks/content.scss";
+@import "blocks/header.scss";
+@import "blocks/navbar.scss";
+@import "blocks/menu_show.scss";
+
+/* Media */
+@import "media/@media.scss";
+
+/* Style */
+body {
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom'
 
-function App() {
+import './scss/style.scss'
+
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
+import Content from './components/Content/Content'
+import Raincoat from './components/Content/Product/Raincoat/Raincoat'
+import Sneakers from './components/Content/Product/Sneakers/Sneakers'
+import Shirts from './components/Content/Product/Shirts/Shirts'
+import Pants from './components/Content/Product/Pants/Pants'
+
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="container">
+          <Header />
+          <Navbar />
+          <Route path="/all" component={Content} />
+          <Route path="/raincoat" component={Raincoat} />
+          <Route path="/sneakers" component={Sneakers} />
+          <Route path="/shirts" component={Shirts} />
+          <Route path="/pants" component={Pants} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
+
 
 export default App;

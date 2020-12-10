@@ -1,0 +1,89 @@
+.content {
+    grid-area: content;
+    background: $white;
+    margin-bottom: 10rem;
+}
+
+.content__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5.06rem;
+    grid-template-rows: 33.18rem;
+
+    .content__item {
+        display: block;
+        width: 100%;
+        height: 31.62rem;
+        cursor: pointer;
+        background-color: $white;
+
+        transition: box-shadow 0.01s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0.625rem 1.875rem rgba($black, .10);
+
+            .slide__block {
+                display: block;
+
+                .slide__block__items {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+
+            .content__info {
+                top: -12.7%;
+                position: relative;
+            }
+        }
+
+        .content__info {
+            margin: 0.90rem 0 0 1.25rem;
+            text-align: center;
+            
+            p, h1 {
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                text-align: left;
+            }
+
+            p {
+                font-size: $font-size-ten;
+                font-weight: $font-weight-500;
+                text-transform: uppercase;
+                color: $grey;
+
+                &:last-child {
+                    text-transform: none; 
+                    font-weight: $font-weight-300;
+                    letter-spacing: 0.06rem;
+                    text-align: center;
+                }
+            }
+
+            h1 {
+                font-size: 16px;
+                font-weight: $font-weight-300;
+                color: $black;
+                padding-top: 0.12rem;
+                padding-bottom: 0.93rem;
+            }
+
+            b {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.25rem;
+                font-weight: $font-weight-500;
+            }
+        }
+    }
+
+    .slide__block {
+        display: none;
+        background: $white;
+        padding: 0.625rem;
+        position: relative;
+        top: -13%;
+        transition: display .5s ease-in-out;
+    }
+}

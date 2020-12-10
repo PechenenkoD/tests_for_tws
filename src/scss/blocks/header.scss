@@ -1,0 +1,30 @@
+.header {
+    grid-area: header ;
+    background: $white;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__block {
+    text-align: center;
+    margin: 21px 0 0 0;
+    display: block;
+    width: 99%;
+}
+
+.header__order {
+    width: 1%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0 0 0;
+    cursor: pointer;
+}
+
+.menu__header__menu {
+    display: none;
+    margin-left: 0.8rem;
+    cursor: pointer;
+}

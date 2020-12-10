@@ -1,0 +1,14 @@
+.container {
+    max-width: 1200px;
+    max-height: auto;
+    background: #fff;
+    overflow-x: hidden;
+
+    display: grid;
+    margin: 0 auto;
+
+    grid-template-areas: 'header header' 'navbar content';
+    grid-template-rows: 6rem 1fr;
+    grid-template-columns: 13.12rem 61rem;
+    grid-gap: 0.8rem
+}
